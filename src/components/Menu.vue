@@ -100,21 +100,22 @@
           }
         },
         documentClick(e) {
-          let element = document.querySelector('.bm-burger-button');
-          let target = null;
-          if (e && e.target) {
-            target = e.target;
-          }
+          console.log("documentClick called")
+          // let element = document.querySelector('.bm-burger-button');
+          // let target = null;
+          // if (e && e.target) {
+          //   target = e.target;
+          // }
 
-          if (
-            element &&
-            element !== target &&
-            !element.contains(target) &&
-            e.target.className !== 'bm-menu' &&
-            this.isSideBarOpen
-          ) {
-            this.closeMenu();
-          }
+          // if (
+          //   element &&
+          //   element !== target &&
+          //   !element.contains(target) &&
+          //   e.target.className !== 'bm-menu' &&
+          //   this.isSideBarOpen
+          // ) {
+          //   this.closeMenu();
+          // }
         }
       },
 
