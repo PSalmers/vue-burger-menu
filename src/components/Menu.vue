@@ -100,7 +100,8 @@
           }
         },
         documentClick(e) {
-          console.log("documentClick called")
+          // eslint-disable-next-line
+          console.log("documentClick called", e)
           // let element = document.querySelector('.bm-burger-button');
           // let target = null;
           // if (e && e.target) {
