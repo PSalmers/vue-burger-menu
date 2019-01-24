@@ -1,6 +1,6 @@
 {
   "name": "vue-burger-menu",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -24,7 +24,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mbj36/vue-burger-menu.git"
+    "url": "git+https://github.com/PSalmers/vue-burger-menu.git"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0",
