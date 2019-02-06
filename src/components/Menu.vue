@@ -106,24 +106,6 @@ export default {
         document.body.style.backgroundColor = "inherit";
         this.isSideBarOpen = false;
       }
-    },
-    documentClick(e) {
-      // eslint-disable-next-line
-      // console.log("documentClick called", e)
-      // let element = document.querySelector('.bm-burger-button');
-      // let target = null;
-      // if (e && e.target) {
-      //   target = e.target;
-      // }
-      // if (
-      //   element &&
-      //   element !== target &&
-      //   !element.contains(target) &&
-      //   e.target.className !== 'bm-menu' &&
-      //   this.isSideBarOpen
-      // ) {
-      //   this.closeMenu();
-      // }
     }
   },
 
@@ -132,12 +114,8 @@ export default {
       document.addEventListener("keyup", this.closeMenuOnEsc);
     }
   },
-  created: function() {
-    document.addEventListener("click", this.documentClick);
-  },
   destroyed: function() {
     document.removeEventListener("keyup", this.closeMenuOnEsc);
-    document.removeEventListener("click", this.documentClick);
   },
   watch: {
     isOpen: {
