@@ -843,12 +843,12 @@ var staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/Menu/slide.vue?vue&type=template&id=70eb7296&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9cdd6cc0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Menu.vue?vue&type=template&id=f76f4178&
-var Menuvue_type_template_id_f76f4178_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"bm-menu",attrs:{"id":"sideNav"}},[_c('nav',{staticClass:"bm-item-list"},[_vm._t("default")],2),_c('span',{staticClass:"bm-cross-button cross-style",class:{ hidden: !_vm.crossIcon },on:{"click":_vm.closeMenu}},_vm._l((2),function(x,index){return _c('span',{key:x,staticClass:"bm-cross",style:({ position: 'absolute', width: '3px', height: '14px',transform: index === 1 ? 'rotate(45deg)' : 'rotate(-45deg)'})})}))]),_c('div',{staticClass:"bm-burger-button",class:{ hidden: !_vm.burgerIcon },on:{"click":_vm.openMenu}},_vm._l((3),function(x,index){return _c('span',{key:index,staticClass:"bm-burger-bars line-style",style:({top:20 * (index * 2) + '%'})})}))])}
-var Menuvue_type_template_id_f76f4178_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9cdd6cc0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Menu.vue?vue&type=template&id=296cd34a&
+var Menuvue_type_template_id_296cd34a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"bm-menu",attrs:{"id":"sideNav"}},[_c('nav',{staticClass:"bm-item-list"},[_vm._t("default")],2),_c('span',{staticClass:"bm-cross-button cross-style",class:{ hidden: !_vm.crossIcon },on:{"click":_vm.closeMenu}},_vm._l((2),function(x,index){return _c('span',{key:x,staticClass:"bm-cross",style:({ position: 'absolute', width: '3px', height: '14px',transform: index === 1 ? 'rotate(45deg)' : 'rotate(-45deg)'})})}))]),_c('div',{staticClass:"bm-burger-button",class:{ hidden: !_vm.burgerIcon },on:{"click":_vm.openMenu}},_vm._l((3),function(x,index){return _c('span',{key:index,staticClass:"bm-burger-bars line-style",style:({top:20 * (index * 2) + '%'})})}))])}
+var Menuvue_type_template_id_296cd34a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Menu.vue?vue&type=template&id=f76f4178&
+// CONCATENATED MODULE: ./src/components/Menu.vue?vue&type=template&id=296cd34a&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.replace.js
 var es6_regexp_replace = __webpack_require__("a481");
@@ -874,8 +874,16 @@ var es6_regexp_replace = __webpack_require__("a481");
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ var Menuvue_type_script_lang_js_ = ({
-  name: 'menubar',
+  name: "menubar",
   data: function data() {
     return {
       isSideBarOpen: false
@@ -893,7 +901,7 @@ var es6_regexp_replace = __webpack_require__("a481");
     width: {
       type: [String],
       required: false,
-      default: '300'
+      default: "300"
     },
     disableEsc: {
       type: Boolean,
@@ -920,40 +928,40 @@ var es6_regexp_replace = __webpack_require__("a481");
   },
   methods: {
     openMenu: function openMenu() {
-      this.$emit('openMenu');
+      this.$emit("openMenu");
       this.isSideBarOpen = true;
 
       if (!this.noOverlay) {
-        document.body.className += 'bm-overlay';
+        document.body.className += "bm-overlay";
       }
 
       if (this.right) {
-        document.querySelector('.bm-menu').style.left = 'auto';
-        document.querySelector('.bm-menu').style.right = '0px';
+        document.querySelector(".bm-menu").style.left = "auto";
+        document.querySelector(".bm-menu").style.right = "0px";
       }
 
       this.$nextTick(function () {
-        document.getElementById('sideNav').style.width = this.width ? this.width + 'px' : '300px';
+        document.getElementById("sideNav").style.width = this.width ? this.width + "px" : "300px";
       });
     },
     closeMenu: function closeMenu() {
-      this.$emit('closeMenu');
+      this.$emit("closeMenu");
       this.isSideBarOpen = false;
-      document.body.className = document.body.className.replace('bm-overlay', '');
-      document.getElementById('sideNav').style.width = '0px';
+      document.body.className = document.body.className.replace("bm-overlay", "");
+      document.getElementById("sideNav").style.width = "0px";
     },
     closeMenuOnEsc: function closeMenuOnEsc(e) {
       e = e || window.event;
 
-      if (e.key === 'Escape' || e.keyCode === 27) {
-        document.getElementById('sideNav').style.width = '0px';
-        document.body.style.backgroundColor = 'inherit';
+      if (e.key === "Escape" || e.keyCode === 27) {
+        document.getElementById("sideNav").style.width = "0px";
+        document.body.style.backgroundColor = "inherit";
         this.isSideBarOpen = false;
       }
     },
-    documentClick: function documentClick(e) {
-      // eslint-disable-next-line
-      console.log("documentClick called", e); // let element = document.querySelector('.bm-burger-button');
+    documentClick: function documentClick(e) {// eslint-disable-next-line
+      // console.log("documentClick called", e)
+      // let element = document.querySelector('.bm-burger-button');
       // let target = null;
       // if (e && e.target) {
       //   target = e.target;
@@ -971,15 +979,15 @@ var es6_regexp_replace = __webpack_require__("a481");
   },
   mounted: function mounted() {
     if (!this.disableEsc) {
-      document.addEventListener('keyup', this.closeMenuOnEsc);
+      document.addEventListener("keyup", this.closeMenuOnEsc);
     }
   },
   created: function created() {
-    document.addEventListener('click', this.documentClick);
+    document.addEventListener("click", this.documentClick);
   },
   destroyed: function destroyed() {
-    document.removeEventListener('keyup', this.closeMenuOnEsc);
-    document.removeEventListener('click', this.documentClick);
+    document.removeEventListener("keyup", this.closeMenuOnEsc);
+    document.removeEventListener("click", this.documentClick);
   },
   watch: {
     isOpen: {
@@ -1001,17 +1009,17 @@ var es6_regexp_replace = __webpack_require__("a481");
       handler: function handler(oldValue, newValue) {
         if (oldValue) {
           this.$nextTick(function () {
-            document.querySelector('.bm-burger-button').style.left = 'auto';
-            document.querySelector('.bm-burger-button').style.right = '36px';
-            document.querySelector('.bm-menu').style.left = 'auto';
-            document.querySelector('.bm-menu').style.right = '0px';
+            document.querySelector(".bm-burger-button").style.left = "auto";
+            document.querySelector(".bm-burger-button").style.right = "36px";
+            document.querySelector(".bm-menu").style.left = "auto";
+            document.querySelector(".bm-menu").style.right = "0px";
           });
         }
 
         if (newValue) {
-          if (document.querySelector('.bm-burger-button').hasAttribute('style')) {
-            document.querySelector('.bm-burger-button').removeAttribute('style');
-            document.getElementById('sideNav').style.right = 'auto';
+          if (document.querySelector(".bm-burger-button").hasAttribute("style")) {
+            document.querySelector(".bm-burger-button").removeAttribute("style");
+            document.getElementById("sideNav").style.right = "auto";
           }
         }
       }
@@ -1129,8 +1137,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   components_Menuvue_type_script_lang_js_,
-  Menuvue_type_template_id_f76f4178_render,
-  Menuvue_type_template_id_f76f4178_staticRenderFns,
+  Menuvue_type_template_id_296cd34a_render,
+  Menuvue_type_template_id_296cd34a_staticRenderFns,
   false,
   null,
   null,
